@@ -1,38 +1,72 @@
-.App {
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body { font-family: 'Segoe UI', sans-serif; background: #f9f9f9; color: #333; }
+
+.header { background: #495E57; color: white; padding: 20px; text-align: center; }
+.header h1 { font-size: 2rem; }
+.header p { color: #F4CE14; font-size: 1.1rem; }
+.header nav { margin-top: 10px; }
+.header nav a { color: #F4CE14; text-decoration: none; font-weight: bold; }
+
+main { max-width: 600px; margin: 40px auto; padding: 0 20px; }
+
+.booking-section h2 { color: #495E57; margin-bottom: 20px; font-size: 1.8rem; }
+
+form { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.1); }
+
+.form-group { margin-bottom: 20px; display: flex; flex-direction: column; gap: 6px; }
+
+label { font-weight: 600; color: #495E57; }
+
+input, select {
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+input:focus, select:focus { outline: none; border-color: #495E57; }
+
+.error { color: #d32f2f; font-size: 0.85rem; }
+
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background: #F4CE14;
+  color: #333;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+button[type="submit"]:hover { background: #e0b800; }
+
+.confirmation {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.confirmation h2 { color: #495E57; margin-bottom: 15px; }
+.confirmation p { margin: 8px 0; font-size: 1.1rem; }
+.confirmation button {
+  margin-top: 20px;
+  padding: 10px 24px;
+  background: #495E57;
   color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
-}
+.footer { background: #495E57; color: white; text-align: center; padding: 20px; margin-top: 60px; }
+.footer a { color: #F4CE14; }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media (max-width: 480px) {
+  main { margin: 20px auto; }
+  form { padding: 20px; }
 }
